@@ -29,14 +29,9 @@ namespace letter_loops
 
 
 
-            Console.WriteLine("Now let\'s see if we can do the thing...");
+            Console.WriteLine("Let's start by iterating over each character you added with a 'foreach' loop. Hit enter when you're ready to proceed.");
             Console.WriteLine("\n");
-
-
-
-            Console.WriteLine("Let's start by simply interating over each character you added. Hit enter when you're ready to proceed.");
-            Console.WriteLine("\n");
-           Console.ReadKey(true);
+            Console.ReadKey(true);
 
 
 
@@ -50,7 +45,11 @@ namespace letter_loops
 
 
 
-            Console.WriteLine("Now let's try it again but attempt to get the first letter to display once, the second twice, ect. Hit 'Enter' when you're ready.");
+            Console.WriteLine("Now let's try it again but attempt to get the first letter to display once, the second twice, ect.");
+            Console.WriteLine("\n");
+            Console.WriteLine("For this we will need a counter, another 'foreach' loop, and a list to put these new strings into.");
+            Console.WriteLine("\n");
+            Console.WriteLine("Hit 'Enter' when you're ready.");
             Console.WriteLine("\n");
             Console.ReadKey(true);
 
@@ -66,7 +65,7 @@ namespace letter_loops
                 string result = new string (letter, counter);
                 commaSeperatedListOfStrings.Add(result);
                
-                Console.WriteLine($"The 'result' variable returns: '{result}'");
+                Console.WriteLine($"The 'result' variable made within the 'foreach' loop returns: '{result}'");
                 
                 Console.WriteLine("\n");
             }
@@ -75,28 +74,28 @@ namespace letter_loops
 
 
 
-            Console.WriteLine("All these variables were 'pushed' into a list where they are joined together using 'Join()'");
+            Console.WriteLine("All these variables were added (using .Add) to a list where they are joined together using 'Join()'");
             Console.ReadKey();
 
 
 
             var combinedStrings = string.Join("-", commaSeperatedListOfStrings);
 
-            TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
+            TextInfo myTextInfo = new CultureInfo("en-US", false).TextInfo;
 
 
 
-            var uppercasedFirstLetterCombined = myTI.ToTitleCase(combinedStrings);
+            var uppercasedFirstLetterCombined = myTextInfo.ToTitleCase(combinedStrings);
             Console.WriteLine("\n");
 
 
 
-            Console.WriteLine($"Your 'combinedStrings' which contains all the variables joined together returns '{combinedStrings}'");
+            Console.WriteLine($"Your 'combinedStrings' variable, which contains all the variables joined together, returns '{combinedStrings}'");
             Console.WriteLine("\n");
 
 
 
-            Console.WriteLine("That's close but we need to get each forst letter to be uppercased.");
+            Console.WriteLine("That's close but we need to get each first letter to be uppercased.");
             Console.WriteLine("\n");
 
 
@@ -105,7 +104,7 @@ namespace letter_loops
 
 
 
-            Console.WriteLine("After adding 'using System.Globalization' at the top of this file, we gained access to 'ToTitleCase' which capitalizes every first letter. ");
+            Console.WriteLine("After adding 'using System.Globalization' at the top of this file, we gained access to 'ToTitleCase' which capitalizes every first letter.");
             Console.WriteLine("\n");
 
 
